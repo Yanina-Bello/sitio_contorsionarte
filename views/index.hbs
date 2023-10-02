@@ -13,37 +13,41 @@
 
 <div class="row my-3">
     <div id="novedades" class="col-md-5 offset-md-2 py-3 scroll_section">
-        <h2>Tips</h2>
+        <h2>Novedades</h2>
         <ul class="lista-novedades">
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/ic.jpg"> Un poco de
-                    técnica</a>
+            {{#each novedades}}
+            <li>
+                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{ id }}"><img
+                        src="images/ic.jpg">{{ titulo }} </a>
             </li>
-            <li><a href="#"><img src="images/ic.jpg">Nivel básico</a></li>
-            <li><a href="#"><img src="images/ic.jpg">Nivel intermedio</a></li>
-            <li><a href="#"><img src="images/ic.jpg">Nivel avanzado</a></li>
-
+            {{/each}}
         </ul>
     </div> <!--cierra novedades de tips-->
-
+    {{#each novedades}}
     <!--inicio modal-->
-    <div class="modal" tabindex="-1" id="exampleModal">
+    <div class="modal" tabindex="-1" id="modal{{ id }}">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Ver más</h5>
+                    <h5 class="modal-title">{{titulo}} </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>AAA</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary">Guardar</button>
+                    <div class="modal-body">
+                        <h2> {{subtitulo}} </h2>
+                        <p> {{cuerpo}} </p>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!--fin modal-->
+    {{/each}}
     <!--cierra div con id novedades-->
     <!--inicio historia-->
     <div id="historia" class="row align-items-center py-3 scroll_section">
@@ -121,7 +125,7 @@
                     <label for="telefono">Teléfono</label>
                     <input type="text" name="tel">
                 </p>
-                
+
                 <p>
                     <label for="mensaje">Mensaje</label>
                     <textarea name="mensaje"></textarea>

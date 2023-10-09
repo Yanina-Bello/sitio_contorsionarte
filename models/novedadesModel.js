@@ -14,12 +14,15 @@ async function deleteNovedadesById(id) {
     return rows;
 }
 
+// inicio alta novedad//
+
 async function insertNovedad(obj) {
     try {
     var query = 'insert into novedades set ? ';
        var rows = await pool.query(query, [obj]);
        return rows;
     } catch (error) {
+        console.log(error);
         throw error;
     }
 }
@@ -39,7 +42,8 @@ async function modificarNovedadById(obj, id) {
     } catch (error) {
         throw error;
     }
+}
 
    
 module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNovedadById, modificarNovedadById }
-}
+

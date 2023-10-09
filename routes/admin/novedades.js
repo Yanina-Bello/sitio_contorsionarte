@@ -26,7 +26,7 @@ router.get('/eliminar/:id', async (req, res, next) => {
 router.get('/agregar', (req, res, next) => {
   res.render('admin/agregar', {
     layout: 'admin/layout'
-  });
+  })
 });
 
 //fin form alta//
@@ -44,14 +44,14 @@ router.get('/modificar/:id', async (req, res, next) => {
 //modificar
 router.post('/modificar', async (req, res, next) => {
   try {
-  let obj = {
-    titulo: req.body.titulo,
-    subtitulo: req.body.subtitulo,
-    cuerpo: req.body.cuerpo,
-  }
+    let obj = {
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo
+    }
 
-  await novedadesModel.modificarNovedadById(obj, req.body.id);
- res.redirect('/admin/novedades');
+    await novedadesModel.modificarNovedadById(obj, req.body.id);
+    res.redirect('/admin/novedades');
   }
   catch (error) {
     console.log(error)
@@ -60,7 +60,7 @@ router.post('/modificar', async (req, res, next) => {
       error: true, message: 'No se modificó la novedad'
     })
   }
-})
+});
 
 
 //capturar datos enviados por formulario//

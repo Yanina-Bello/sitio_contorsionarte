@@ -1,9 +1,9 @@
-<div class="container" style="margin: 100px auto;">
+<div class="container" style="margin: 100px auto">
     <div class="row">
         <div class="col">
-            <p class="text-right"> Hola {{ usuario }} ! <a href="/admin/login/logout"
-                    class="btn btn-sm btn-danger">Cerrar sesión
-                    <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            <p class="text-right">Hola {{ usuario }} !
+                <a href="/admin/login/logout"
+                    class="btn btn-sm btn-danger">Cerrar sesión <i class="fa fa-sign-out" aria-hidden="true"></i></a>
             </p>
         </div>
     </div>
@@ -36,7 +36,6 @@
                 <th scope="row">{{id}}</th>
                 <td>{{titulo}}</td>
                 <td class="text-right">
-                    <a href=" " class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
                     <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i
                             class="fas fa-trash"></i></a>
                     <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn-secondary"><i

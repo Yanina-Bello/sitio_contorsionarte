@@ -8,6 +8,8 @@
         </div>
     </div>
 </div>
+
+
 <!--termina titulo rectangular-->
 <!--comienzan novedades de tips-->
 
@@ -17,7 +19,7 @@
         <ul class="lista-novedades">
             {{#each novedades}}
             <li>
-                <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{ id }}">
+                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{ id }}">
                     <img src="{{imagen}}" width="120"> {{ titulo }}
                 </a>
             </li>
@@ -28,6 +30,7 @@
             <img src=" {{imagen}} ">
             <p> {{cuerpo}} </p>
         </div>
+
 
     </div> <!--cierra novedades de tips-->
     {{#each novedades}}
@@ -46,7 +49,7 @@
                         <h2> {{subtitulo}} </h2>
                         <p> {{cuerpo}} </p>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar</button>
+
                     </div>
                 </div>
             </div>
@@ -55,26 +58,9 @@
     <!--fin modal-->
     {{/each}}
     <!--cierra div con id novedades-->
-    <!--inicio historia-->
-    <div id="historia" class="row align-items-center py-3 scroll_section">
-        <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
-            <img src="images/otrahistoria.png" alt="historia 1" class="img-fluid">
-        </div>
-        <div class="col-12 d-sm-none">
-            <img src="images/histoflex.jpeg" alt="historia 2" class="img-fluid">
-        </div>
-        <div class="col-12 d-sm-none">
-            <img src="images/otrahistoria.png" alt="historia 2" class="img-fluid">
-        </div>
-        <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
-            <h2>Modalidad</h2>
-            <p> Personalizada online o presencial.</p>
-        </div>
-    </div>
-    <!--cierra div historia-->
 
     <!--inicio nosotros-->
-    <div id="sobremí" class="row align-items-center py-4 scroll_section">
+    <div id="historia" class="row align-items-center py-4 scroll_section">
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -118,28 +104,32 @@
             <!--fin mapa-->
 
             <!--inicio formulario-->
-            <form action="/" method="post" class="formulario">
-                <p>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre">
-                </p>
-                <p>
-                    <label for="email">Email</label>
-                    <input type="text" name="email">
-                </p>
-                <p>
-                    <label for="telefono">Teléfono</label>
-                    <input type="text" name="tel">
-                </p>
+            <div class="col-md-4 mt-4 mt-sm-0">
+                <h2>Contacto</h2>
+                <div class="container">
+                    <form action="/" method="post" class="formulario">
+                        <p>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre">
+                        </p>
+                        <p>
+                            <label for="email">Email</label>
+                            <input type="text" name="email">
+                        </p>
+                        <p>
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" name="tel">
+                        </p>
 
-                <p>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje"></textarea>
-                </p>
+                        <p>
+                            <label for="mensaje">Mensaje</label>
+                            <textarea name="mensaje"></textarea>
+                        </p>
 
-                <p class="acciones"><input type="submit" value="Enviar" /></p>
+                        <p class="acciones"><input type="submit" value="Enviar" /></p>
 
-            </form>
+                    </form>
 
-            <p> {{message}} </p>
-            <!--fin form contacto-->
+                    <p> {{message}} </p>
+                </div>
+                <!--fin form contacto-->

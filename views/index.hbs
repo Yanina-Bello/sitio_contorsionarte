@@ -15,7 +15,7 @@
 
 <div class="row my-3">
     <div id="novedades" class="col-md-5 offset-md-2 py-3 scroll_section">
-        <h2>Novedades</h2>
+        <h3 class="text-center">Novedades</h3>
         <ul class="lista-novedades">
             {{#each novedades}}
             <li>
@@ -58,35 +58,62 @@
     <!--fin modal-->
     {{/each}}
     <!--cierra div con id novedades-->
-
-    <!--inicio nosotros-->
-    <div id="historia" class="row align-items-center py-4 scroll_section">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="images/mifoto.jpeg" class="img-fluid rounded-start" alt="align-items-center">
+    <!--inicio div cambios-->
+    <div class="col-md-3 my-3">
+        <h3 class="text-center"> Antes / Después </h3>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/cambio1.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Sobre mí</h5>
-                        <p class="card-text">Comencé haciendo Yoga Artístico a los 7 años, luego a los 9 seguí con
-                            Contorsión
-                            Deportiva y Danzada. Desde entonces participé en competencias y torneos del CENARD hasta
-                            realizar las
-                            formaciones que hoy me permiten enseñar lo que tanto me gusta hacer.</p>
+                <div class="carousel-item">
+                    <img src="images/cambio2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/cambio3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!--fin div cambios-->
+     
+    <!--inicio nosotros-->
+    <div class="col-md-4 offset-md-2">
+        <div id="historia" class="row align-items-center py-4 scroll_section">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="images/mifoto.jpeg" class="img-fluid rounded-start" alt="align-items-center">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Sobre mí</h5>
+                            <p class="card-text">Comencé haciendo Yoga Artístico a los 7 años, luego a los 9 seguí con
+                                Contorsión
+                                Deportiva y Danzada. Desde entonces participé en competencias y torneos del CENARD hasta
+                                realizar las
+                                formaciones que hoy me permiten enseñar lo que tanto me gusta hacer.</p>
 
+
+                        </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-
     <!--fin nosotros-->
-
-
 
 
     <!--inicio mapa-->

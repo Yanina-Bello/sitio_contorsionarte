@@ -40,7 +40,7 @@ router.post('/', async (req, res, next) => {
   var obj = {
     to: 'yaninabello@live.com',
     subject: 'CONTACTO WEB',
-    html: nombre + "se contactó a través de la web y quiere más info a este correo : " + email + ". <br> Su tel es: " + tel + mensaje
+    html: nombre + " <br> Se contactó a través de la web y quiere más info a este correo : " + email + ". <br> Su tel es: " + tel + " <br> y dijo:" + mensaje
 
   }
 

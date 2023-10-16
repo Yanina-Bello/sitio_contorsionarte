@@ -18,6 +18,13 @@
         <div class="col-5 text-right">
             <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fas fa-plus"></i>Nuevo</a>
         </div>
+        <div class="col-3">
+            <form class="form-inline my-2 my-lg-0" action="/admin/novedades" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search"
+           aria-label="Search" name="q" value="{{q}}">
+           <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+           </form> 
+           </div>
     </div>
     {{!!fin fila 2!!}}
     {{!!inicio fila 3}}
@@ -48,5 +55,12 @@
             {{/each}}
         </tbody>
     </table>
-
+{{#if is_search}}
+{{#unless novedades.length}}
+No se encontraron resultados para "<strong> {{q}} </strong>
+{{/unless}}
+{{/if}}
+<input class="form-control mr-sm-2" type="search"
+placeholder="Search" aria-label="Search" name="q"
+{{#if q}} value="{{q}}"{{/if}}>
 </div>

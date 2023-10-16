@@ -7,6 +7,19 @@ const uploader = util.promisify(cloudinary.uploader.upload);
 const destroy = util.promisify(cloudinary.uploader.destroy);
 router.get('/', async function (req, res, next) {
 
+  var novedades
+  if (req.query.q ===undefined) {
+    novedades = await novedadesModel.getNovedades();
+  } else {
+    novedades = await novedadesModel.buscarNovedades(req.query.q);
+  }
+  res.render('admin/novedades', {
+    layout: 'admin/layout',
+    usuario: req.session.nombre,
+    novedades,
+    is_search: req.query.q !== undefined,
+    q: req.query.q
+  });
   var novedades = await novedadesModel.getNovedades();
 
   novedades = novedades.map(novedad => {
